@@ -79,25 +79,11 @@ function toSetSlider() {
   prevBtn.addEventListener("click", () => {
     counter--;
     toShowSlide();
-    clearInterval(timeInterval);
-    setTimeout(() => {
-      setInterval(() => {
-        counter++;
-        toShowSlide();
-      }, 20000);
-    }, 13000);
   });
 
   nextBtn.addEventListener("click", () => {
     counter++;
     toShowSlide();
-    clearInterval(timeInterval);
-    setTimeout(() => {
-      setInterval(() => {
-        counter++;
-        toShowSlide();
-      }, 20000);
-    }, 13000);
   });
 
   function toShowSlide() {
@@ -117,7 +103,7 @@ function toSetSlider() {
   timeInterval = setInterval(() => {
     counter++;
     toShowSlide();
-  }, 10000);
+  }, 15000);
 }
 
 toSetSlider();
